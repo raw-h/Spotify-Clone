@@ -1,0 +1,362 @@
+/*<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: black;
+  color: white;
+  overflow: hidden; /*The overflow property is used when the content exceeds the page height, it has several different options for scrolling down, 
+  for cutting the exceeding content and much more, hidden does not let in scroll down, and the content exceeding the page height also becomes invisible.*/
+}
+
+.main {
+  display: flex;
+  height: 100vh; /*All the height of the view port*/
+}
+
+.sidebar {
+  background-color: black;
+  width: 340px;
+  border-radius: 1rem; /*16 px*/
+}
+
+.main-content {
+  background-color: #121212;
+  flex: 1; /*Since using a flex display on the parent content makes all the inner content as inline, 
+  so to occupy all the space in the widht and push other elements to side we use flex = 1,
+  so the main-content box occupied all the remaining space of vh after giving sidebar a width of 340px*/
+  border-radius: 1rem;
+  overflow: auto; /*Now we only want a scroll bar in the main content of the site, so we will again re-write the property for overflow in this 
+  segment to override to above line. Auto means the scroll bar only apprears when the the content is scrolled.*/
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  padding: 0 1.5rem;
+}
+
+.music-player {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex; /*This was to give the flex property to the navbar, but flex direction is always row, which makes all the elements inline elements in a row, 
+  but to make all the elements inline in a column, we change the flex direction to column.*/
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem;
+  height: 100px;
+}
+
+.nav-option {
+  line-height: 2.5rem; /*Used to determine the spacing in between tags, but it doesn't affect the whole body size of the parent.*/
+  padding: 0.5rem 0.75rem;
+  opacity: 0.6;
+  display: flex;
+}
+
+.lib-option {
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-option:hover {
+  opacity: 1;
+}
+
+.nav-option i {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+.nav-option a {
+  font-size: 1rem;
+}
+
+.library {
+  background-color: #121212;
+  border-radius: 1rem;
+  height: 100%;
+  margin: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lib-option img {
+  height: 1.25rem;
+  padding: 0rem 0.5rem;
+}
+
+.icons-icons {
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  opacity: 0.6;
+}
+
+.icons-icons:hover {
+  opacity: 1;
+}
+
+.box {
+  background-color: #232323;
+  height: 8rem;
+  border-radius: 0.75rem;
+  margin: 0.5rem 0 1.75rem 0;
+  padding: 0.75rem 1.25rem;
+}
+
+.box-p1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.box-p2 {
+  font-size: 0.75rem;
+  font-weight: 200;
+  opacity: 0.6;
+}
+
+.badge {
+  background-color: white;
+  border: none;
+  border-radius: 100px;
+  font-weight: 700;
+  padding: 0.4rem;
+  margin: 0.4rem;
+  height: 2rem;
+  font-size: 0.7rem;
+  transition: 0.2s;
+}
+
+.badge:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.b1 {
+  width: 7rem;
+}
+
+.b2 {
+  width: 9rem;
+}
+
+.b3 {
+  width: 8rem;
+}
+
+.b4 {
+  background-color: black;
+  color: white;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b4 i {
+  margin: 0;
+  margin-right: 0.5rem;
+  padding: 0;
+}
+
+.box2 {
+  height: 9.5rem;
+}
+
+.sticky-nav {
+  padding: 0.5rem 0.5rem;
+  position: sticky;
+  top: 0;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.sticky-nav-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 1rem;
+  background-color: #232323;
+  width: 10rem;
+  border-radius: 8px;
+  margin: 1rem;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card-info {
+  font-weight: 200;
+  font-size: small;
+  opacity: 0.6;
+}
+
+.footer {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  width: 90%;
+  height: 65%;
+  border-top: 1px solid white;
+  opacity: 0.4;
+}
+
+.music-player {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-player {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.album-song {
+  font-weight: 600;
+  margin: 0;
+  padding: 0.5rem 0.75rem 0 0.75rem;
+}
+
+.album-singer {
+  padding: 0.5rem 0.75rem 0 0.75rem;
+  margin: 0;
+  font-weight: 200;
+  font-size: 0.7rem;
+}
+
+.album-icon {
+  display: flex;
+  align-items: center;
+}
+
+.album-ic {
+  margin: 5px;
+  height: 1.25rem;
+}
+
+.player {
+  width: 50%;
+}
+
+.controls {
+  width: 25%;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.player-control-icon {
+  height: 1rem;
+  margin: 0 1.25rem;
+  opacity: 0.6;
+}
+
+.player-control-icon:hover {
+  opacity: 1;
+}
+
+.playback-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar {
+  width: 70%;
+  margin: 0.5rem 0.75rem;
+  appearance: none; /*It is the bydefault appearance code that the BROWSER puts on an element, so in this case we have a progress bar, 
+  so putting appearance to none will remove all the css that the browser (chrome, in our case) has implemented on the progress bar*/
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html ... below we are using pseudo elements for our slider (i.e progress bar),
+the first one is for the track, and the second one for the thumb*/
+.progress-bar::-webkit-slider-runnable-track {
+  background-color: #121212;
+  height: 0.2rem;
+  border-radius: 100px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  height: 0.2rem;
+  width: 0.2rem;
+  background-color: #1bd760;
+  border-radius: 50%;
+}
+
+.controls{
+  display: flex;
+  align-items: center;
+}
+
+.controls-icon{
+  padding: 8px;
+  height: 1.25rem;
+}
